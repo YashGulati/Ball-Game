@@ -13,10 +13,12 @@ function keyDownHandler(e) {
     }
     else if(e.keyCode == 27) {
       if (debug) console.log("escape pressed");
+      gameState = "paused";
       escapePressed = true;
     }
     else if(e.keyCode == 13) {
       if (debug) console.log("enter pressed");
+      if (gameState == "paused") gameState = "active";
       escapePressed = false;
     }
 }

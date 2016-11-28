@@ -10,8 +10,7 @@ function collisionDetection() {
                     score++;
                     ballColorChange();
                     if(score == brickRowCount*brickColumnCount) {
-                        alert("YOU WIN, CONGRATS!");
-                        document.location.reload();
+                        gameState = "won"; bannerWon();
                     }
                 }
             }
@@ -66,16 +65,11 @@ function drawLives() {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    if( escapePressed ) {
-      bannerPause();
-      console.log("game paused");
-    }
-    else {
+    drawScore();
+    drawLives();
     drawBricks();
     drawBall();
     drawPaddle();
-    drawScore();
-    drawLives();
     collisionDetection();
 
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
@@ -110,11 +104,12 @@ function draw() {
     else if(leftPressed && paddleX > 0) {
         paddleX -= 7;
     }
-
     x += dx;
     y += dy;
-   } // else
-   requestAnimationFrame(draw);
+   if(gameState == "active")
+    requestAnimationFrame(draw);
+  else if(gameState == "paused")
+    requestAnimationFrame(bannerPause);
 } // draw
 
 draw();

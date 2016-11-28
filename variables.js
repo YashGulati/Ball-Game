@@ -23,6 +23,7 @@ var brickHeight = 20;
 var brickPadding = 10;
 var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
+var gameState = "active";
 var score = 0;
 var lives = 3;
 var level = 1;
