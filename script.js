@@ -1,31 +1,4 @@
 
-
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
-document.addEventListener("mousemove", mouseMoveHandler, false);
-
-function keyDownHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = true;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = true;
-    }
-}
-function keyUpHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = false;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = false;
-    }
-}
-function mouseMoveHandler(e) {
-    var relativeX = e.clientX - canvas.offsetLeft;
-    if(relativeX > 0 && relativeX < canvas.width) {
-        paddleX = relativeX - paddleWidth/2;
-    }
-}
 function collisionDetection() {
     for(c=0; c<brickColumnCount; c++) {
         for(r=0; r<brickRowCount; r++) {
@@ -54,7 +27,7 @@ function drawBall() {
     ctx.closePath();
 }
 function ballColorChange(){
-  color++; color = color%(Object.keys(colors).length+1);
+  color++; color = color%(Object.keys(colors).length);
 }
 function drawPaddle() {
     ctx.beginPath();

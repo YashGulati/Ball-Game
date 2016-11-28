@@ -22,9 +22,9 @@ var brickOffsetLeft = 30;
 var score = 0;
 var lives = 3;
 var level = 1;
-var colors = {
-  1: "#0095DD", 2: "#33DD22" // , 3: ""
-};
+var colors = [
+  "#0095DD", "#33DD22"// , 3: ""
+];
 var color = 1;
 var bricks = [];
 
