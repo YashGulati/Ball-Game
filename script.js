@@ -65,9 +65,12 @@ function drawLives() {
 }
 
 function draw() {
-    //if( escapePressed ) { bannerPause(); console.log("aa"); }
-    //else {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if( escapePressed ) {
+      bannerPause();
+      console.log("game paused");
+    }
+    else {
     drawBricks();
     drawBall();
     drawPaddle();
@@ -110,7 +113,8 @@ function draw() {
 
     x += dx;
     y += dy;
-    requestAnimationFrame(draw); // } // else
+   } // else
+   requestAnimationFrame(draw);
 } // draw
 
 draw();

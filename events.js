@@ -12,11 +12,11 @@ function keyDownHandler(e) {
         leftPressed = true;
     }
     else if(e.keyCode == 27) {
-      //console.log("escape pressed");
+      if (debug) console.log("escape pressed");
       escapePressed = true;
     }
     else if(e.keyCode == 13) {
-      //console.log("enter pressed");
+      if (debug) console.log("enter pressed");
       escapePressed = false;
     }
 }
