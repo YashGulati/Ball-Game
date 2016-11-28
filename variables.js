@@ -1,3 +1,6 @@
+var myCanvasWidth = 480;
+var myCanvasHeight = 320;
+document.write('<canvas id="myCanvas" width="'+ myCanvasWidth +'" height="'+ myCanvasHeight +'"></canvas>');
 var debug = 1;
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
