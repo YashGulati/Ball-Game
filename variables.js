@@ -10,6 +10,7 @@ var dy = -1 * speed;
 var paddleHeight = 10;
 var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;
+var escapePressed = false;
 var rightPressed = false;
 var leftPressed = false;
 var brickRowCount = 5;

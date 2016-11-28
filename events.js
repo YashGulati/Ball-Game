@@ -11,6 +11,14 @@ function keyDownHandler(e) {
     else if(e.keyCode == 37) {
         leftPressed = true;
     }
+    else if(e.keyCode == 27) {
+      //console.log("escape pressed");
+      escapePressed = true;
+    }
+    else if(e.keyCode == 13) {
+      //console.log("enter pressed");
+      escapePressed = false;
+    }
 }
 function keyUpHandler(e) {
     if(e.keyCode == 39) {

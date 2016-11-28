@@ -65,7 +65,9 @@ function drawLives() {
 }
 
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //if( escapePressed ) { bannerPause(); console.log("aa"); }
+    //else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBricks();
     drawBall();
     drawPaddle();
@@ -108,7 +110,7 @@ function draw() {
 
     x += dx;
     y += dy;
-    requestAnimationFrame(draw);
-}
+    requestAnimationFrame(draw); // } // else
+} // draw
 
 draw();
