@@ -23,9 +23,12 @@ var score = 0;
 var lives = 3;
 var level = 1;
 var colors = [
-  "#0095DD", "#33DD22"// , 3: ""
+  "#0095DD", // blue
+  "#33DD22", // green
+  "#DD2244",  // red
+  "#00FFFF"
 ];
-var color = 1;
+var color = 0;
 var bricks = [];
 
 // bricks initialization
